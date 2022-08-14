@@ -7,10 +7,11 @@ class Node():
         self.left = None
         self.right = None
 
+
 # Depth First Search Algorithm (Iteratively)
 def depth_first(root):
     # If root is Null
-    if root == None:
+    if root is None:
         return []
     
     # First onto stack is root
@@ -39,8 +40,6 @@ def depth_first_recursive(root):
     left_value = depth_first_recursive(root.left) # [b, d, e]
     right_value = depth_first_recursive(root.right) # [c, f]
     return [root.val] + left_value + right_value
-
-
 
 
 # Constructing Nodes
